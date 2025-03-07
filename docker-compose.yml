@@ -1,0 +1,25 @@
+version: "3.8"
+
+services:
+  evolution-proxy:
+    build: .  # Construir a imagem com base no Dockerfile dentro da pasta
+    ports:
+      - "3000:3000"
+    deploy:
+      replicas: 1
+      resources:
+        limits:
+          cpus: "0.5"
+          memory: 256M
+    networks:
+      - minha_rede
+    volumes:
+      - proxy_data:/app/data
+
+networks:
+  minha_rede:
+    external: true
+
+volumes:
+  proxy_data:
+    driver: local
