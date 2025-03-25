@@ -8,7 +8,7 @@ def send_media():
     try:
         payload = request.json
         response = requests.post(
-            'https://evolutionapi.lapduz.com/message/sendMedia/main',
+            'https://evolutionapi.jncompany.com.br/message/sendMedia/main',
             headers={'apikey': 'F90E81C294D1-4541-8579-61A7A6687E63'},
             json=payload
         )
