@@ -11,14 +11,8 @@ services:
         limits:
           cpus: "0.5"
           memory: 256M
-    networks:
-      - minha_rede
     volumes:
       - proxy_data:/app/data
-
-networks:
-  minha_rede:
-    external: true
 
 volumes:
   proxy_data:
