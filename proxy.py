@@ -9,7 +9,7 @@ def send_media():
         payload = request.json
         response = requests.post(
             'https://evolutionapi.lapduz.com/message/sendMedia/main',
-            headers={'apikey': 'F016BCA45814-4E5F-9456-35034BF9EF98'},
+            headers={'apikey': 'F90E81C294D1-4541-8579-61A7A6687E63'},
             json=payload
         )
         response.raise_for_status()
